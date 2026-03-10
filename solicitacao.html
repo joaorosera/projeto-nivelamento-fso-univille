@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Coleta - Descarte Consciente</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="fundo-imagem">
+
+    <header class="cabecalho">
+        <a href="index.html" class="logo">Descarte Consciente de Pilhas</a>
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="pontos.html">Pontos de Coleta</a>
+            <a href="solicitacao.html">Solicitação de Coleta</a>
+            <a href="denuncia.html">Denúncia</a>
+        </nav>
+    </header>
+
+    <main class="container-form">
+        
+        <h1 class="titulo-form">Solicitar Coleta</h1>
+        <h2 class="subtitulo-form">Preencha os campos para solicitar a coleta</h2>
+
+        <form action="sucesso.html" method="POST">
+            
+            <input type="text" name="nome" placeholder="Nome" class="input-form" required autocomplete="off">
+            
+            <input type="text" name="endereco" placeholder="Endereço" class="input-form" required>
+            
+            <input type="text" name="bairro" placeholder="Bairro" class="input-form" required>
+            
+            <input type="number" name="quantidade" placeholder="Quantidade aproximada" class="input-form" min="0" required>
+            
+            <input type="tel" name="telefone" placeholder="Telefone" class="input-form" maxlength="15" required>
+            
+            <button type="submit" class="botao botao-form">Enviar solicitação</button>
+            
+        </form>
+
+    </main>
+
+    <footer class="rodape">
+        <p>(©) Projeto Acadêmico - João Vitor Rosera</p>
+        <p>Contribua para um futuro sustentável!</p>
+    </footer>
+
+</body>
+</html>
