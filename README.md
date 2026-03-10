@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
 </p>
 
-> Projeto acadêmico desenvolvido para a disciplina de Nivelamento FSO da **Univille**, focado em conscientizar e facilitar o descarte correto de pilhas e baterias.
+> Projeto acadêmico desenvolvido para a disciplina de Fábrica de Software da **Univille**, focado em conscientizar e facilitar o descarte correto de pilhas e baterias.
 
 🌍 **Acesse o projeto online:** [projeto-nivelamento-fso-univille.vercel.app](https://projeto-nivelamento-fso-univille.vercel.app)
 
