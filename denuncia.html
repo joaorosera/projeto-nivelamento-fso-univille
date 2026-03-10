@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denúncia - Descarte Consciente</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="fundo-imagem">
+
+    <header class="cabecalho">
+        <a href="index.html" class="logo">Descarte Consciente de Pilhas</a>
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="pontos.html">Pontos de Coleta</a>
+            <a href="solicitacao.html">Solicitação de Coleta</a>
+            <a href="denuncia.html">Denúncia</a>
+        </nav>
+    </header>
+
+    <section class="banner-denuncia">
+        <div class="conteudo-denuncia">
+            <h1>Denunciar Descarte Irregular</h1>
+            <p>Ajude a manter a cidade limpa denunciando<br>locais com descarte incorreto de pilhas</p>
+        </div>
+    </section>
+
+    <main class="container-form-denuncia">
+        
+        <div class="caixa-denuncia">
+            <h2 class="titulo-denuncia">Realizar Denúncia</h2>
+
+            <form action="sucesso.html" method="POST">
+                
+                <label class="label-denuncia">Nome (Opcional)</label>
+                <input type="text" name="nome" class="input-denuncia" autocomplete="off" placeholder="Deixe em branco para denúncia anônima">
+                
+                <label class="label-denuncia">Local do ocorrido</label>
+                <input type="text" name="local" class="input-denuncia" required autocomplete="off">
+                
+                <label class="label-denuncia">Descrição</label>
+                <textarea name="descricao" rows="5" maxlength="500" class="textarea-form" required></textarea>
+                
+                <button type="submit" class="botao-denuncia">Enviar denúncia</button>
+                
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+        <p>(©) Projeto Acadêmico - João Vitor Rosera</p>
+        <p>Contribua para um futuro sustentável!</p>
+    </footer>
+
+</body>
+</html>
