@@ -1,0 +1,470 @@
+/* Reset layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #E2E8E4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   CABEÇALHO E MENU (GLOBAL - PADRÃO PARA TUDO)
+   ========================================= */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #f4f7f5; /* Fundo cinza clarinho global */
+}
+
+.cabecalho .logo {
+    text-decoration: none;
+    color: #333; 
+    font-weight: bold;
+    font-size: 18px; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 30px; 
+    font-size: 14px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   BANNER (TELA INICIAL)
+   ========================================= */
+.banner-verde {
+    position: relative;
+    background-color: #3b5d50;
+    color: white;
+    display: flex;
+    align-items: center;
+    min-height: 480px; 
+    overflow: hidden;
+}
+
+.imagem-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center center; 
+    z-index: 1;
+}
+
+.conteudo-banner {
+    position: relative;
+    z-index: 2; 
+    padding-left: 50px;
+    max-width: 600px; 
+}
+
+.conteudo-banner h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+
+.conteudo-banner p {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   BOTÕES E ENQUETE (TELA INICIAL)
+   ========================================= */
+.botao {
+    background-color: #1f4233;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.botao:hover {
+    background-color: #142e23;
+}
+
+.barra-enquete {
+    background-color: #1f4233;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: max-content;
+    margin: 40px auto;
+}
+
+.barra-enquete .botao {
+    background-color: #3b5d50;
+}
+
+/* =========================================
+   CARDS DE INFORMAÇÃO (TELA INICIAL)
+   ========================================= */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+.titulo-cards {
+    text-align: center;
+    color: #1f4233;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.secao-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.card-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card-info h3 {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.icone-card {
+    width: 45px; 
+    height: auto;
+    margin-right: 15px;
+}
+
+.card-info p {
+    font-size: 12px;
+    color: #000;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+.rodape {
+    background-color: #1f382e;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
+}
+
+/* =========================================
+   PONTOS DE COLETA
+   ========================================= */
+.fundo-pontos {
+    background-image: url('../img/imagem-fundo.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #E2E8E4;
+}
+
+.titulo-pagina {
+    text-align: center;
+    color: #1f4233;
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.subtitulo-pagina {
+    text-align: center;
+    color: #3b5d50;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.barra-busca {
+    display: block;
+    margin: 0 auto 50px auto;
+    padding: 12px 20px 12px 40px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #aaa;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: transparent;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23555"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 20px;
+}
+
+.grid-pontos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.card-ponto {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-ponto h3 {
+    font-size: 16px;
+    color: #1f4233;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.card-ponto p {
+    font-size: 14px;
+    color: #111;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.card-ponto .icone-texto {
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.card-ponto .botao {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* =========================================
+   FORMULÁRIOS GENÉRICOS (EX: SOLICITAÇÃO)
+   ========================================= */
+.fundo-imagem {
+    background-image: url('../img/imagem-fundo.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #E2E8E4;
+}
+
+.container-form {
+    max-width: 500px;
+    margin: 60px auto; 
+    padding: 0 20px;
+    flex: 1;
+}
+
+.titulo-form {
+    text-align: center;
+    color: #1f4233;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitulo-form {
+    text-align: center;
+    color: #2b4d3d;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.input-form {
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #a3b0a9;
+    border-radius: 5px;
+    background-color: #d3dcd7; 
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.input-form::placeholder {
+    color: #5c6e65; 
+}
+
+.botao-form {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 18px;
+}
+
+/* =========================================
+   TELA DE DENÚNCIA (BANNER CORRIGIDO SEM AMASSAR)
+   ========================================= */
+.banner-denuncia {
+    background-image: url('../img/exclamacao-verde.png'); 
+    background-size: cover; /* A MÁGICA TÁ AQUI: não estica, só preenche */
+    background-position: right center; /* Ancorado na direita pra não cortar a exclamação */
+    background-color: #3b5d50; 
+    color: white;
+    display: flex;
+    align-items: center;
+    min-height: 280px;
+    padding: 0 50px;
+}
+
+.conteudo-denuncia {
+    max-width: 600px; 
+    z-index: 2;
+}
+
+.conteudo-denuncia h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
+}
+
+.conteudo-denuncia p {
+    font-size: 20px;
+    line-height: 1.4;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.container-form-denuncia {
+    width: 100%;
+    max-width: 900px; 
+    margin: 50px auto 70px auto;
+    padding: 0 20px;
+}
+
+.caixa-denuncia {
+    background-color: #dbe4df; 
+    border: 1px solid #a3b0a9;
+    border-radius: 5px;
+    padding: 40px; 
+}
+
+.titulo-denuncia {
+    color: #6d7f76; 
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.label-denuncia {
+    display: block;
+    font-weight: bold;
+    color: #6d7f76;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.input-denuncia, .textarea-form {
+    width: 100%;
+    padding: 14px 15px; 
+    margin-bottom: 25px;
+    border: 1px solid #a3b0a9; 
+    border-radius: 5px;
+    background-color: #E2E8E4; 
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.textarea-form {
+    resize: vertical;
+}
+
+.botao-denuncia {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #1a4231;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao-denuncia:hover {
+    background-color: #123023;
+}
+
+/* =========================================
+   TELA DE SUCESSO (AÇÃO REALIZADA)
+   ========================================= */
+.caixa-sucesso {
+    background-color: #dbe4df; 
+    border: 1px solid #a3b0a9;
+    border-radius: 5px;
+    padding: 60px 40px; 
+    text-align: center; /* Centraliza tudo dentro da caixa */
+    max-width: 700px;
+    margin: 50px auto 80px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Ícone de check usando SVG direto no CSS (dispensa imagem externa) */
+.icone-sucesso {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px auto;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231a4231" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.titulo-sucesso {
+    color: #1a4231;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.texto-sucesso {
+    color: #3b5d50;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
