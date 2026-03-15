@@ -1,4 +1,4 @@
-/* Reset layout */
+/* --- RESET DE LAYOUT --- */
 * {
     margin: 0;
     padding: 0;
@@ -14,15 +14,13 @@ body {
     min-height: 100vh;
 }
 
-/* =========================================
-   CABEÇALHO E MENU (GLOBAL - PADRÃO PARA TUDO)
-   ========================================= */
+/* --- CABEÇALHO E MENU (TODAS AS PÁGINAS) --- */
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background-color: #f4f7f5; /* Fundo cinza clarinho global */
+    background-color: #f4f7f5;
 }
 
 .cabecalho .logo {
@@ -43,9 +41,7 @@ body {
     text-decoration: underline;
 }
 
-/* =========================================
-   BANNER (TELA INICIAL)
-   ========================================= */
+/* --- INDEX.HTML (TELA INICIAL) --- */
 .banner-verde {
     position: relative;
     background-color: #3b5d50;
@@ -69,7 +65,7 @@ body {
 
 .conteudo-banner {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     padding-left: 50px;
     max-width: 600px; 
 }
@@ -78,16 +74,13 @@ body {
     font-size: 40px;
     line-height: 1.2;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .conteudo-banner p {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-/* =========================================
-   BOTÕES E ENQUETE (TELA INICIAL)
-   ========================================= */
 .botao {
     background-color: #1f4233;
     color: white;
@@ -122,9 +115,6 @@ body {
     background-color: #3b5d50;
 }
 
-/* =========================================
-   CARDS DE INFORMAÇÃO (TELA INICIAL)
-   ========================================= */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -176,9 +166,7 @@ body {
     text-align: justify;
 }
 
-/* =========================================
-   RODAPÉ
-   ========================================= */
+/* --- RODAPÉ (TODAS AS PÁGINAS) --- */
 .rodape {
     background-color: #1f382e;
     color: white;
@@ -187,9 +175,7 @@ body {
     margin-top: auto;
 }
 
-/* =========================================
-   PONTOS DE COLETA
-   ========================================= */
+/* --- PONTOS.HTML (PONTOS DE COLETA) --- */
 .fundo-pontos {
     background-image: url('../img/imagem-fundo.png'); 
     background-size: cover;
@@ -274,9 +260,7 @@ body {
     text-align: center;
 }
 
-/* =========================================
-   FORMULÁRIOS GENÉRICOS (EX: SOLICITAÇÃO)
-   ========================================= */
+/* --- SOLICITACAO.HTML (SOLICITAÇÃO DE COLETA) --- */
 .fundo-imagem {
     background-image: url('../img/imagem-fundo.png'); 
     background-size: cover;
@@ -331,13 +315,11 @@ body {
     font-size: 18px;
 }
 
-/* =========================================
-   TELA DE DENÚNCIA (BANNER CORRIGIDO SEM AMASSAR)
-   ========================================= */
+/* --- DENUNCIA.HTML (DENÚNCIA DE DESCARTE) --- */
 .banner-denuncia {
     background-image: url('../img/exclamacao-verde.png'); 
-    background-size: cover; /* A MÁGICA TÁ AQUI: não estica, só preenche */
-    background-position: right center; /* Ancorado na direita pra não cortar a exclamação */
+    background-size: cover; 
+    background-position: right center; 
     background-color: #3b5d50; 
     color: white;
     display: flex;
@@ -404,6 +386,25 @@ body {
     font-weight: bold;
 }
 
+/* Campo para envio de arquivos */
+.input-arquivo {
+    width: 100%;
+    padding: 12px 15px; 
+    margin-bottom: 25px;
+    border: 2px dashed #a3b0a9; 
+    border-radius: 5px;
+    background-color: #E2E8E4; 
+    font-size: 14px;
+    color: #5c6e65;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input-arquivo:focus {
+    outline: none;
+    border-color: #3b5d50;
+}
+
 .textarea-form {
     resize: vertical;
 }
@@ -425,35 +426,27 @@ body {
     background-color: #123023;
 }
 
-/* =========================================
-   TELA DE SUCESSO (AÇÃO REALIZADA)
-   ========================================= */
+/* --- SUCESSO.HTML (AÇÃO REALIZADA COM SUCESSO) --- */
 .caixa-sucesso {
     background-color: #dbe4df; 
     border: 1px solid #a3b0a9;
     border-radius: 5px;
     padding: 60px 40px; 
-    text-align: center; /* Centraliza tudo dentro da caixa */
-    max-width: 700px;
+    text-align: center; 
+    max-width: 650px;
     margin: 50px auto 80px auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Ícone de check usando SVG direto no CSS (dispensa imagem externa) */
 .icone-sucesso {
     display: block;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 30px auto;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231a4231" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px auto;
 }
 
 .titulo-sucesso {
     color: #1a4231;
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -464,7 +457,25 @@ body {
     line-height: 1.5;
     font-weight: bold;
     margin-bottom: 40px;
+}
+
+.botao-sucesso {
+    display: block;
+    width: 100%;
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #1a4231;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.botao-sucesso:hover {
+    background-color: #123023;
 }
