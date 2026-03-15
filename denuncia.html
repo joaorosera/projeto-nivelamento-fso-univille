@@ -8,29 +8,29 @@
 </head>
 <body class="fundo-imagem">
 
-    <header class="cabecalho">
+    <div class="cabecalho">
         <a href="index.html" class="logo">Descarte Consciente de Pilhas</a>
-        <nav class="menu">
+        <div class="menu">
             <a href="index.html">Início</a>
             <a href="pontos.html">Pontos de Coleta</a>
             <a href="solicitacao.html">Solicitação de Coleta</a>
             <a href="denuncia.html">Denúncia</a>
-        </nav>
-    </header>
+        </div>
+    </div>
 
-    <section class="banner-denuncia">
+    <div class="banner-denuncia">
         <div class="conteudo-denuncia">
             <h1>Denunciar Descarte Irregular</h1>
             <p>Ajude a manter a cidade limpa denunciando<br>locais com descarte incorreto de pilhas</p>
         </div>
-    </section>
+    </div>
 
-    <main class="container-form-denuncia">
+    <div class="container-form-denuncia">
         
         <div class="caixa-denuncia">
             <h2 class="titulo-denuncia">Realizar Denúncia</h2>
 
-            <form action="sucesso.html" method="POST">
+            <form action="sucesso.html" method="POST" enctype="multipart/form-data">
                 
                 <label class="label-denuncia">Nome (Opcional)</label>
                 <input type="text" name="nome" class="input-denuncia" autocomplete="off" placeholder="Deixe em branco para denúncia anônima">
@@ -41,17 +41,20 @@
                 <label class="label-denuncia">Descrição</label>
                 <textarea name="descricao" rows="5" maxlength="500" class="textarea-form" required></textarea>
                 
+                <label class="label-denuncia">Anexar evidência (Fotos ou PDF)</label>
+                <input type="file" name="arquivo" class="input-arquivo" accept="image/*, .pdf">
+                
                 <button type="submit" class="botao-denuncia">Enviar denúncia</button>
                 
             </form>
         </div>
 
-    </main>
+    </div>
 
-    <footer class="rodape">
+    <div class="rodape">
         <p>(©) Projeto Acadêmico - João Vitor Rosera</p>
         <p>Contribua para um futuro sustentável!</p>
-    </footer>
+    </div>
 
 </body>
 </html>
