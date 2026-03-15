@@ -8,61 +8,100 @@
 </head>
 <body class="fundo-pontos">
 
-    <header class="cabecalho">
+    <div class="cabecalho">
         <a href="index.html" class="logo">Descarte Consciente de Pilhas</a>
-        <nav class="menu">
+        <div class="menu">
             <a href="index.html">Início</a>
             <a href="pontos.html">Pontos de Coleta</a>
             <a href="solicitacao.html">Solicitação de Coleta</a>
             <a href="denuncia.html">Denúncia</a>
-        </nav>
-    </header>
+        </div>
+    </div>
 
-    <main class="container">
+    <div class="container">
         
         <h1 class="titulo-pagina">Pontos de Coleta</h1>
         <h2 class="subtitulo-pagina">em Joinville</h2>
 
-        <input type="text" placeholder="Buscar por bairro" class="barra-busca">
+        <input type="text" id="input-busca" placeholder="Buscar por bairro" class="barra-busca">
 
-        <section class="grid-pontos">
+        <div class="grid-pontos" id="lista-pontos">
             
-            <div class="card-ponto">
+            <div class="card-ponto bairro-item">
                 <h3>Unidade Regional de Obras Oeste</h3>
                 <p><span class="icone-texto">📍</span> R. São Brá, 184 - Vila Nova</p>
                 <p><span class="icone-texto">🕒</span> Seg a Sáb. Das 08:00 às 17:00</p>
                 <a href="https://maps.app.goo.gl/StjGhMC43RT7vCyi9" target="_blank" class="botao">Como Chegar</a>
             </div>
 
-            <div class="card-ponto">
+            <div class="card-ponto bairro-item">
                 <h3>Unidade Regional de Obras Sudeste</h3>
                 <p><span class="icone-texto">📍</span> R. Guanabara, 2013 - Guanabara</p>
                 <p><span class="icone-texto">🕒</span> Seg a Sáb. Das 08:00 às 17:00</p>
                 <a href="https://maps.app.goo.gl/AequtBBJMPgJqafS6" target="_blank" class="botao">Como Chegar</a>
             </div>
 
-            <div class="card-ponto">
+            <div class="card-ponto bairro-item">
                 <h3>Unidade Regional de Obras Centro-Norte</h3>
                 <p><span class="icone-texto">📍</span> R. Guilherme, 604 - Costa e Silva</p>
                 <p><span class="icone-texto">🕒</span> Seg a Sáb. Das 08:00 às 17:00</p>
                 <a href="https://maps.app.goo.gl/4eESrw6JT1dtiEuF8" target="_blank" class="botao">Como Chegar</a>
             </div>
 
-            <div class="card-ponto">
+            <div class="card-ponto bairro-item">
                 <h3>Centro de Artes e Esportes Unificados</h3>
                 <p><span class="icone-texto">📍</span> R. Theonesto Westrupp, 627 - Aventureiro</p>
                 <p><span class="icone-texto">🕒</span> Seg a Sáb. Das 08:00 às 17:00</p>
                 <a href="https://maps.app.goo.gl/6qA35A3t9rhnxPMM7" target="_blank" class="botao">Como Chegar</a>
             </div>
 
-        </section>
+            <div id="mensagem-erro" style="display: none; grid-column: 1 / -1; text-align: center; color: #1f4233; font-size: 18px; font-weight: bold; margin-top: 20px;">
+                Poxa, ainda não temos ponto de coleta nesse bairro!
+            </div>
 
-    </main>
+        </div>
 
-    <footer class="rodape">
+    </div>
+
+    <div class="rodape">
         <p>(©) Projeto Acadêmico - João Vitor Rosera</p>
         <p>Contribua para um futuro sustentável!</p>
-    </footer>
+    </div>
+
+    <script>
+        // Elementos do DOM
+        let inputBusca = document.getElementById('input-busca');
+        let cartoes = document.getElementsByClassName('bairro-item');
+        let mensagemErro = document.getElementById('mensagem-erro');
+
+        // Evento de digitação no campo de busca
+        inputBusca.addEventListener('input', function() {
+            
+            let textoDigitado = inputBusca.value.toLowerCase();
+            let achouAlgumBairro = false; 
+
+            // Itera sobre os cartões para buscar a correspondência
+            for (let i = 0; i < cartoes.length; i++) {
+                let cartaoAtual = cartoes[i];
+                let textoDoCartao = cartaoAtual.innerText.toLowerCase();
+
+                // Exibe ou oculta o cartão baseado na busca
+                if (textoDoCartao.includes(textoDigitado)) {
+                    cartaoAtual.style.display = "flex"; 
+                    achouAlgumBairro = true; 
+                } else {
+                    cartaoAtual.style.display = "none";
+                }
+            }
+
+            // Exibe a mensagem de erro caso nenhum bairro seja encontrado
+            if (!achouAlgumBairro) {
+                mensagemErro.style.display = "block";
+            } else {
+                mensagemErro.style.display = "none"; 
+            }
+        });
+    </script>
 
 </body>
 </html>
